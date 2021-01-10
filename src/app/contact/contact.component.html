@@ -1,0 +1,14 @@
+<h2>Nous contacter : </h2>
+
+<form #f="ngForm" (submit)="sendMsg(f)">
+    <label>Catégorie</label>
+    <select id="category" name="category">
+        <option value="Avis">Avis</option>
+        <option value="Bug">Bug</option>
+    </select> <br>
+    <label>Titre</label>
+    <input type="text" id="msgTitle" ngModel name="msgTitle"> <br>
+    <label>Message</label>
+    <input type="text" id="msgContent" ngModel name="msgContent"> <br>
+    <button type="submit">Envoyer</button>
+</form>

@@ -1,0 +1,15 @@
+a {
+    color: black;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 2px;
+    padding: 3px;
+    display: inline-block;
+    height: 30px;
+}
+
+div.navbar {
+    height: 30px;
+    background-color: rgb(182, 181, 181);
+}
+
