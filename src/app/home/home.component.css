@@ -1,18 +1,18 @@
 body {
-    background-color: #c2e9fb;
     position: fixed;
     height: 100%;
-    width: 100%;
 }
 
 h2{
-    padding: 30px;
+    padding: 10px;
 }
 
 div.content {
-    background-color: #c3cfe2;
+    border: solid;
+    border-color: rgb(156, 145, 145);
     padding: 15px;
     margin: 15px;
+    width: 1320px;
 }
 
 p {
@@ -23,7 +23,7 @@ img.logo {
     position: relative;
     height: 80px;
     width: 80px;
-    top: -100px;
+    top: 0px;
     right: -1300px;
 }
 

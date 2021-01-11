@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
 
   sendMsg(form) {
       console.log("message envoyé");
+      console.log(form.value);
   }
 
 }
