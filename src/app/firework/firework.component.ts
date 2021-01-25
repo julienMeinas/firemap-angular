@@ -11,14 +11,14 @@ export class FireworkComponent implements OnInit {
     {
       id: 1,
       city: "Tourcoing",
-      adress: "Tourcoing centre",
+      address: "Tourcoing centre",
       price: 0,
       handicapAccess: true,
       duration: "Low",
-      crowded: "Middle"
+      crowed: "Middle"
     }
   ]
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {
