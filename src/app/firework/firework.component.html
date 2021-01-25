@@ -3,5 +3,14 @@
     <div class="content">
         <h2>Feux d'artifice du moment</h2>
     </div>
+    <div class="listFireworks">
+        <app-firework-item *ngFor="let firework of fireworks"
+                            [city] = "firework.city"
+                            [address] = "firework.address"
+                            [price] = "firework.price"
+                            [handicapAccess] = "firework.handicapAccess"
+                            [duration] = "firework.duration"
+                            [crowed] = "firework.crowed"></app-firework-item>
+    </div>
     <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>
 </body>
