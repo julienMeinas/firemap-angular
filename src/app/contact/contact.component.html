@@ -1,19 +1,30 @@
 <body>
     <img src="../../favicon.ico" class="logo">
     <div class="content">
-        <h2>Nous contacter</h2>
-        <form #f="ngForm" (submit)="sendMsg(f)">
-            <label>Catégorie</label>
-            <select id="category" name="category">
-                <option value="Avis">Avis</option>
-                <option value="Bug">Bug</option>
-            </select> <br>
-            <label>Titre</label>
-            <input type="text" id="msgTitle" ngModel name="msgTitle"> <br>
-            <label>Message</label>
-            <input type="text" id="msgContent" ngModel name="msgContent"> <br>
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="container">
+            <div class="login-box">
+                <h2>Nous contacter</h2>
+                <form #f="ngForm" (submit)="sendMsg(f)">
+                    <div class="user-box">
+                    </div>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Titre</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Commentaire</label>
+                  </div>
+                  <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Envoyer
+                  </a>
+                </form>
+              </div>
+        </div>
     </div>
     <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>
 </body>

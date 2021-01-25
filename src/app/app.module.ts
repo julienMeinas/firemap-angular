@@ -10,6 +10,7 @@ import { FireworkComponent } from './firework/firework.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
 import { FiremapApiService } from './service/FiremapApi.service';
+import { FireworkItemComponent } from './firework-item/firework-item.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FiremapApiService } from './service/FiremapApi.service';
     HomeComponent,
     FireworkComponent,
     ContactComponent,
+    FireworkItemComponent,
   ],
   imports: [
     BrowserModule,
