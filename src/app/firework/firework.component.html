@@ -4,6 +4,7 @@
         <h2>Feux d'artifice du moment</h2>
         <div class="listFireworks">
             <ul><app-firework-item *ngFor="let firework of getFireworks()"
+                [id] = "firework.id"
                 [city] = "firework.city"
                 [address] = "firework.address"
                 [price] = "firework.price"

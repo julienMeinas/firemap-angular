@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Firework } from '../classes/Firework';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-firework-item',
@@ -8,15 +9,22 @@ import { Firework } from '../classes/Firework';
 })
 export class FireworkItemComponent implements OnInit {
   msg: String = "item feu d'artifice";
+  @Input() id: number
   @Input() city: String
   @Input() address: String
   @Input() price: Int16Array
   @Input() handicapAccess: boolean
   @Input() duration: String
   @Input() crowed: String
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onClickInfo() {
+    const link = "/firework/" + this.id;
+    this.router.navigate([link]);
   }
 
 }

@@ -12,6 +12,7 @@ import { from } from 'rxjs';
 import { FireworkService } from './service/Firework.service';
 import { FireworkItemComponent } from './firework-item/firework-item.component';
 import { EditFireworkComponent } from './edit-firework/edit-firework.component';
+import { SingleFireworkComponent } from './single-firework/single-firework.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EditFireworkComponent } from './edit-firework/edit-firework.component';
     ContactComponent,
     FireworkItemComponent,
     EditFireworkComponent,
+    SingleFireworkComponent,
   ],
   imports: [
     BrowserModule,
