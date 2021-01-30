@@ -3,7 +3,7 @@
     <div class="content">
         <h2>Feux d'artifice du moment</h2>
         <div class="listFireworks">
-            <ul><app-firework-item *ngFor="let firework of fireworks"
+            <ul><app-firework-item *ngFor="let firework of getFireworks()"
                 [city] = "firework.city"
                 [address] = "firework.address"
                 [price] = "firework.price"
@@ -11,8 +11,8 @@
                 [duration] = "firework.duration"
                 [crowed] = "firework.crowed"></app-firework-item>
             </ul>
-            
         </div>
+        <a routerLink="/edit">Ajouter un feu d'artifice</a> 
     </div>
 
     <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>

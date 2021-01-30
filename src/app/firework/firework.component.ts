@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Firework } from '../classes/Firework';
+import {  Subject } from 'rxjs'
+import { FireworkService } from '../service/Firework.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-firework',
@@ -7,21 +10,27 @@ import { Firework } from '../classes/Firework';
   styleUrls: ['./firework.component.css']
 })
 export class FireworkComponent implements OnInit {
-  fireworks = [
-    {
-      id: 1,
-      city: "Tourcoing",
-      address: "Tourcoing centre",
-      price: 0,
-      handicapAccess: true,
-      duration: "Low",
-      crowed: "Middle"
-    }
-  ]
-  constructor() {
+  fireworks: Firework[];
+  fireworkSubscription: Subscription;
+
+  constructor(private fireworkService: FireworkService) {
   }
 
   ngOnInit(): void {
+    this.fireworkSubscription = this.fireworkService.fireworkSubject.subscribe(
+      (fireworks: any[]) => {
+        this.fireworks = fireworks;
+      }
+    )
+    this.fireworkService.emitFireworkSubject();
   }
+
+
+  getFireworks() {
+    return this.fireworks;
+  }
+  
+
+  
 
 }

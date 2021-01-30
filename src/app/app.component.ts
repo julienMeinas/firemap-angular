@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FiremapApiService} from './service/FiremapApi.service';
+import { FireworkService} from './service/Firework.service';
 import { Firework } from './classes/Firework';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,20 +11,23 @@ import { Firework } from './classes/Firework';
 export class AppComponent implements OnInit{
   title = 'firemap-angular';
   fireworks: Firework[];
+  fireworkSubscription: Subscription;
 
-  constructor(private firemapApiService: FiremapApiService ) {
+  constructor(private fireworkService: FireworkService ) {
     
   }
 
   ngOnInit() {
-    this.firemapApiService.getFireworks()
-      .subscribe
-      (
-        data =>
-        {
-          this.fireworks = data;
-        }
-      )
+    this.fireworkSubscription = this.fireworkService.fireworkSubject.subscribe(
+      (fireworks: any[]) => {
+        this.fireworks = fireworks;
+      }
+    )
+    this.fireworkService.emitFireworkSubject();
+  }
+
+  getFireworks() {
+    return this.fireworks;
   }
 
 }

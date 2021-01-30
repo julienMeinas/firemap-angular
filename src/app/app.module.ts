@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { FireworkComponent } from './firework/firework.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
-import { FiremapApiService } from './service/FiremapApi.service';
+import { FireworkService } from './service/Firework.service';
 import { FireworkItemComponent } from './firework-item/firework-item.component';
+import { EditFireworkComponent } from './edit-firework/edit-firework.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FireworkItemComponent } from './firework-item/firework-item.component';
     FireworkComponent,
     ContactComponent,
     FireworkItemComponent,
+    EditFireworkComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { FireworkItemComponent } from './firework-item/firework-item.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [FiremapApiService],
+  providers: [FireworkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

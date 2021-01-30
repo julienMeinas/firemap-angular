@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http'
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
