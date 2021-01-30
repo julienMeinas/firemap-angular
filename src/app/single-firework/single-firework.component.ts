@@ -12,6 +12,9 @@ export class SingleFireworkComponent implements OnInit {
   address: string = "address";
   date: string = "date";
   price: number = 2;
+  handicapAccess: boolean;
+  duration: string;
+  crowed: string;
 
   constructor(private fireworkService: FireworkService,
               private route: ActivatedRoute) { }
@@ -23,6 +26,9 @@ export class SingleFireworkComponent implements OnInit {
     this.address = fireworkObject.address;
     this.date = fireworkObject.date;
     this.price = fireworkObject.price;
+    this.handicapAccess = fireworkObject.handicapAccess;
+    this.duration = fireworkObject.duration;
+    this.crowed = fireworkObject.crowed;
   }
 
 }
