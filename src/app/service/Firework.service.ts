@@ -16,20 +16,20 @@ export class FireworkService {
       city: "Tourcoing",
       address: "Tourcoing centre",
       date: "14/07/2022",
-      price: 0,
-      handicapAccess: true,
-      duration: "Low",
-      crowed: "Middle"
+      price: "Gratuit",
+      handicapAccess: "oui",
+      duration: "Court",
+      crowed: "Moyennement de gens"
     },
     {
       id: 2,
       city: "Lille",
       address: "Foire de Lille",
       date: "15/07/2022",
-      price: 0,
-      handicapAccess: true,
-      duration: "Medium",
-      crowed: "High"
+      price: "Gratuit",
+      handicapAccess: "oui",
+      duration: "Moyenne",
+      crowed: "Beaucoup de gens"
     }
   ]
 
@@ -58,14 +58,14 @@ export class FireworkService {
       return this.fireworks;
     }
 
-    addFirework(city: string, address: string, date: string, price: number, handicapAccess: boolean, duration: string, crowed: string) {
+    addFirework(city: string, address: string, date: string, price: string, handicapAccess: string, duration: string, crowed: string) {
       const fireworkObject = {
         id: 0,
         city: "",
         address: "",
         date: "",
-        price: 0,
-        handicapAccess: true,
+        price: "Gratuit",
+        handicapAccess: "Oui",
         duration: "",
         crowed: ""
       };

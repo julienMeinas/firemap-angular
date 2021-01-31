@@ -11,8 +11,8 @@ export class SingleFireworkComponent implements OnInit {
   city: string = "city";
   address: string = "address";
   date: string = "date";
-  price: number = 2;
-  handicapAccess: boolean;
+  price: string = "Gratuit";
+  handicapAccess: string;
   duration: string;
   crowed: string;
 

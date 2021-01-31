@@ -5,8 +5,8 @@ export class Firework {
     city: String
     adress: string;
     date: string;
-    price: Int16Array;
-    handicapAccess: boolean;
+    price: string;
+    handicapAccess: string;
     duration: string;
     crowded: string;
 }
