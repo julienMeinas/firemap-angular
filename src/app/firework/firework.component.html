@@ -3,6 +3,7 @@
     <div class="content">
         <h2>Feux d'artifice du moment</h2>
         <div class="listFireworks">
+<<<<<<< HEAD
             <ul><app-firework-item *ngFor="let firework of getFireworks()"
                 [id] = "firework.id"
                 [city] = "firework.city"
@@ -13,8 +14,30 @@
                 [duration] = "firework.duration"
                 [crowed] = "firework.crowed"></app-firework-item>
             </ul>
+=======
+            <table id="fireworks">
+              <tr>
+                <th>Ville</th>
+                <th>Address</th>
+                <th>Prix</th>
+                <th>Accès handicapé</th>
+                <th>Durée</th>
+                <th>Public</th>
+                <th>Info</th>
+              </tr>
+              <tr *ngFor="let firework of getFireworks()">
+                <td>{{firework.city}}</td>
+                <td>{{firework.address}}</td>
+                <td>{{firework.price}}</td>
+                <td>{{firework.handicapAccess}}</td>
+                <td>{{firework.duration}}</td>
+                <td>{{firework.crowed}}</td>
+                <td><a routerLink="/firework/{{firework.id}}"><button class="btn btn-success pull-right" > Info</button></a></td>
+              </tr>
+            </table>
+>>>>>>> 6874bf27da3d45a7adaa82c5f8db03b9e1fc84da
         </div>
-        <a routerLink="/edit">Ajouter un feu d'artifice</a> 
+        <a routerLink="/edit">Ajouter un feu d'artifice</a>
     </div>
 
     <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>
