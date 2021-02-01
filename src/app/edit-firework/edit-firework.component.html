@@ -6,6 +6,7 @@
                     Ville 
                 </label>
                 <input type="text" id="city" class="form-control" name="city" ngModel>
+                <label style="background-color: red" *ngIf="validCity == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-group">
@@ -13,6 +14,7 @@
                     Addresse
                 </label>
                 <input type="text" id="address" class="form-control" name="address" ngModel>
+                <label style="background-color: red" *ngIf="validAddress == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-group">
@@ -20,6 +22,7 @@
                     Date
                 </label>
                 <input type="text" id="date" class="form-control" name="date" ngModel>
+                <label style="background-color: red" *ngIf="validDate == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-group">
@@ -30,6 +33,7 @@
                     <option value="Gratuit">Gratuit</option>
                     <option value="Payant">Payant</option>
                 </select>
+                <label style="background-color: red" *ngIf="validPrice == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-group">
@@ -40,6 +44,7 @@
                     <option value="Oui">Oui</option>
                     <option value="Non">Non</option>
                 </select>
+                <label style="background-color: red" *ngIf="validHandicapAccess == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-group">
@@ -51,6 +56,7 @@
                     <option value="Moyen">Moyen</option>
                     <option value="Long">Long</option>
                 </select>
+                <label style="background-color: red" *ngIf="validDuration == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <div class="form-control">
@@ -62,6 +68,7 @@
                     <option value="Moyennement de gens">Moyennement de gens</option>
                     <option value="Beaucoup de gens">Beaucoup de gens</option>
                 </select>
+                <label style="background-color: red" *ngIf="validCrowed == false">Veuillez entrer un champs valide !</label>
             </div>
 
             <button type="submit" class="btn btn-primary">Enregistrer</button>
