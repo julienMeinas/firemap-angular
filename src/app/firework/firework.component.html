@@ -11,20 +11,18 @@
                 <th>Accès handicapé</th>
                 <th>Durée</th>
                 <th>Public</th>
-                <th>Info</th>
               </tr>
-              <tr *ngFor="let firework of getFireworks()">
+              <tr routerLink="/firework/{{firework.id}}" *ngFor="let firework of getFireworks()">
                 <td>{{firework.city}}</td>
                 <td>{{firework.address}}</td>
                 <td>{{firework.price}}</td>
                 <td>{{firework.handicapAccess}}</td>
                 <td>{{firework.duration}}</td>
                 <td>{{firework.crowed}}</td>
-                <td><a routerLink="/firework/{{firework.id}}"><button class="btn btn-success pull-right" > Info</button></a></td>
               </tr>
             </table>
         </div>
-        <a routerLink="/edit">Ajouter un feu d'artifice</a>
+        <a routerLink="/edit"><button class="button"><span>Ajouter un feu d'artifice</span></button></a>
     </div>
 
     <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>
