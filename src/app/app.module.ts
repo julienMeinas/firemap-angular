@@ -10,7 +10,6 @@ import { FireworkComponent } from './firework/firework.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
 import { FireworkService } from './service/Firework.service';
-import { FireworkItemComponent } from './firework-item/firework-item.component';
 import { EditFireworkComponent } from './edit-firework/edit-firework.component';
 import { SingleFireworkComponent } from './single-firework/single-firework.component';
 
@@ -20,13 +19,12 @@ import { SingleFireworkComponent } from './single-firework/single-firework.compo
     HomeComponent,
     FireworkComponent,
     ContactComponent,
-    FireworkItemComponent,
     EditFireworkComponent,
     SingleFireworkComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     FormsModule,
     HttpClientModule
   ],
