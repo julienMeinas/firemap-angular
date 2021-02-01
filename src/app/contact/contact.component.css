@@ -8,11 +8,11 @@ h2{
 }
 
 div.content {
-  border: solid;
-  border-color: rgb(156, 145, 145);
-  padding: 15px;
-  margin: 15px;
-  width: 1320px;
+    border: solid;
+    border-color: rgb(156, 145, 145);
+    padding: 15px;
+    margin: auto;
+    width: 1320px;
 }
 
 p {
@@ -20,16 +20,14 @@ p {
 }
 
 img.logo {
-    position: relative;
+    position: fixed;
+    right: 0;
     height: 80px;
     width: 80px;
-    top: 0px;
-    right: -1300px;
 }
 
 h6.names {
-    position: relative;
-    top: 300px;
-    right: -1200px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
-  

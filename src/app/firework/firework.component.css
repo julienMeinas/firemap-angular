@@ -11,7 +11,7 @@ div.content {
     border: solid;
     border-color: rgb(156, 145, 145);
     padding: 15px;
-    margin: 15px;
+    margin: auto;
     width: 1320px;
 }
 
@@ -20,17 +20,16 @@ p {
 }
 
 img.logo {
-    position: relative;
+    position: fixed;
+    right: 0;
     height: 80px;
     width: 80px;
-    top: 0px;
-    right: -1300px;
 }
 
 h6.names {
-    position: relative;
-    top: 300px;
-    right: -1200px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 #fireworks {
@@ -54,4 +53,43 @@ h6.names {
   text-align: left;
   background-color: #4CAF50;
   color: white;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 12px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
