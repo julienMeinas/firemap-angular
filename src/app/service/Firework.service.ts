@@ -10,32 +10,24 @@ export class FireworkService {
 
   fireworkSubject = new Subject<any[]>();
 
-  private fireworks = [
-    {
-      id: 1,
-      city: "Tourcoing",
-      address: "Tourcoing centre",
-      date: "14/07/2022",
-      price: "Gratuit",
-      handicapAccess: "oui",
-      duration: "Court",
-      crowed: "Moyennement de gens"
-    },
-    {
-      id: 2,
-      city: "Lille",
-      address: "Foire de Lille",
-      date: "15/07/2022",
-      price: "Gratuit",
-      handicapAccess: "oui",
-      duration: "Moyenne",
-      crowed: "Beaucoup de gens"
-    }
-  ]
+  private fireworks = []
 
 
     constructor(private httpclient: HttpClient) {
-
+      const url = "https://firemap-api-rest.herokuapp.com/fireworks/";
+      this.httpclient
+        .get<any[]>(url)
+        .subscribe(
+          (data) => {
+            console.log("récupération des feux d'artifice");
+            console.log(data);
+            this.fireworks = data;
+            this.emitFireworkSubject();
+          },
+          (error) => {
+            console.log("erreur lors de la récupération des feux d'artifice");
+          }
+        )
     }
 
 
@@ -58,28 +50,6 @@ export class FireworkService {
       return this.fireworks;
     }
 
-    addFirework(city: string, address: string, date: string, price: string, handicapAccess: string, duration: string, crowed: string) {
-      const fireworkObject = {
-        id: 0,
-        city: "",
-        address: "",
-        date: "",
-        price: "Gratuit",
-        handicapAccess: "Oui",
-        duration: "",
-        crowed: ""
-      };
-      fireworkObject.id = this.fireworks[(this.fireworks.length - 1)].id + 1;
-      fireworkObject.city = city;
-      fireworkObject.address = address;
-      fireworkObject.date = date;
-      fireworkObject.price = price;
-      fireworkObject.handicapAccess = handicapAccess;
-      fireworkObject.duration = duration;
-      fireworkObject.crowed = crowed;
-      this.fireworks.push(fireworkObject);
-      this.emitFireworkSubject();
-    }
 
   
 }

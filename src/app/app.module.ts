@@ -10,7 +10,6 @@ import { FireworkComponent } from './firework/firework.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
 import { FireworkService } from './service/Firework.service';
-import { EditFireworkComponent } from './edit-firework/edit-firework.component';
 import { SingleFireworkComponent } from './single-firework/single-firework.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { SingleFireworkComponent } from './single-firework/single-firework.compo
     HomeComponent,
     FireworkComponent,
     ContactComponent,
-    EditFireworkComponent,
     SingleFireworkComponent,
   ],
   imports: [

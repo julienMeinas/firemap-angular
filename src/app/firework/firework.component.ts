@@ -29,6 +29,13 @@ export class FireworkComponent implements OnInit {
   getFireworks() {
     return this.fireworks;
   }
+
+
+  displayAccessHandicap(value: boolean) {
+    if(value == true)
+      return "Oui"
+    return "Non";
+  }
   
 
   
