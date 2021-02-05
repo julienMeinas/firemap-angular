@@ -5,6 +5,7 @@
         <div class="listFireworks">
             <table id="fireworks">
               <tr>
+                <th>Date</th>
                 <th>Ville</th>
                 <th>Address</th>
                 <th>Prix</th>
@@ -13,12 +14,13 @@
                 <th>Public</th>
               </tr>
               <tr routerLink="/firework/{{firework.id}}" *ngFor="let firework of getFireworks()">
+                <td>{{firework.date}}</td>
                 <td>{{firework.city}}</td>
                 <td>{{firework.address}}</td>
                 <td>{{firework.price}}</td>
                 <td>{{firework.handicapAccess}}</td>
                 <td>{{firework.duration}}</td>
-                <td>{{firework.crowed}}</td>
+                <td>{{firework.crowded}}</td>
               </tr>
             </table>
         </div>

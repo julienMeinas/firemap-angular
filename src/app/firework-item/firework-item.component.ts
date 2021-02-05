@@ -15,7 +15,7 @@ export class FireworkItemComponent implements OnInit {
   @Input() price: Int16Array
   @Input() handicapAccess: boolean
   @Input() duration: String
-  @Input() crowed: String
+  @Input() crowded: String
 
   constructor(private router: Router) { }
 

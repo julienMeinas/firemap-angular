@@ -22,6 +22,10 @@ export class FireworkService {
             console.log("récupération des feux d'artifice");
             console.log(data);
             this.fireworks = data;
+            this.fireworks.forEach(element => {
+              this.displayData(element);
+              
+            });
             this.emitFireworkSubject();
           },
           (error) => {
@@ -30,14 +34,35 @@ export class FireworkService {
         )
     }
 
+    displayData(element) {
+      if(element.handicapAccess == "true"){
+        element.handicapAccess = "Oui";
+      }else{
+        element.handicapAccess = "Non";
+      }
+      if(element.duration == "Short") {
+        element.duration = "Court"
+      }else if(element.duration == "Middle") {
+        element.duration = "Moyen";
+      }else if (element.duration == "Long"){
+        element.duration = "Long"
+      } else {
+        element.duration = "Non indiqué"
+      }
 
-    getFireworkById(id: number) {
-      const firework = this.fireworks.find(
-        (fireworkObject) => {
-          return fireworkObject.id === id;
-        }
-      )
-      return firework;
+      if(element.crowded == "Low") {
+        element.crowded = "Peu de monde"
+      }else if(element.crowded == "Medium") {
+        element.crowded = "Moyennement de monde";
+      }else if (element.crowded == "High"){
+        element.crowded = "Beaucoup de monde"
+      } else {
+        element.crowded = "Non indiqué"
+      }
+
+      // date
+      element.date = element.date.substring(8,10) + "/" + element.date.substring(5,7) + "/" + element.date.substring(0,4) + " - " + element.date.substring(11,16);
+
     }
     
 

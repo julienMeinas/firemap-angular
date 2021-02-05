@@ -22,6 +22,7 @@ export class FireworkComponent implements OnInit {
         this.fireworks = fireworks;
       }
     )
+    
     this.fireworkService.emitFireworkSubject();
   }
 
