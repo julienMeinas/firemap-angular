@@ -1,30 +1,37 @@
 <body>
-    <img src="../../favicon.ico" class="logo">
-    <div class="content">
-        <h2>Feux d'artifice du moment</h2>
-        <div class="listFireworks">
-            <table id="fireworks">
-              <tr>
-                <th>Date</th>
-                <th>Ville</th>
-                <th>Address</th>
-                <th>Prix</th>
-                <th>Accès handicapé</th>
-                <th>Durée</th>
-                <th>Public</th>
-              </tr>
-              <tr routerLink="/firework/{{firework.id}}" *ngFor="let firework of getFireworks()">
-                <td>{{firework.date}}</td>
-                <td>{{firework.city}}</td>
-                <td>{{firework.address}}</td>
-                <td>{{firework.price}}</td>
-                <td>{{firework.handicapAccess}}</td>
-                <td>{{firework.duration}}</td>
-                <td>{{firework.crowded}}</td>
-              </tr>
-            </table>
-        </div>
-    </div>
+    <div class="container">
+      <img class="rounded mx-auto d-block p-2" src="../../favicon.ico">
+      <div class="row border border-dark p-3">
+        <h1>Feux d'artifice du moment</h1>
+            <table class="table table-striped table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Date</th>
+                  <th>Ville</th>
+                  <th>Address</th>
+                  <th>Prix</th>
+                  <th>Accès handicapé</th>
+                  <th>Durée</th>
+                  <th>Public</th>
+                </tr>
+              </thead>
 
-    <h6 class="names">Réalisé par Martel Benjamin et Meinas Julien</h6>
+              <tbody>
+                <tr routerLink="/firework/{{firework.id}}" *ngFor="let firework of getFireworks()">
+                  <td>{{firework.date}}</td>
+                  <td>{{firework.city}}</td>
+                  <td>{{firework.address}}</td>
+                  <td>{{firework.price}}</td>
+                  <td>{{firework.handicapAccess}}</td>
+                  <td>{{firework.duration}}</td>
+                  <td>{{firework.crowded}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+      </div>
+      <div class="navbar fixed-bottom">
+        <footer>Réalisé par Martel Benjamin et Meinas Julien</footer>
+      </div>
+    </div>
 </body>
