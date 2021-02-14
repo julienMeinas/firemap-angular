@@ -21,10 +21,4 @@ export class FireworkItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  onClickInfo() {
-    const link = "/firework/" + this.id;
-    this.router.navigate([link]);
-  }
-
 }

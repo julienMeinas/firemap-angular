@@ -16,7 +16,7 @@
               </thead>
 
               <tbody>
-                <tr routerLink="/firework/{{firework.id}}" *ngFor="let firework of getFireworks()">
+                <tr *ngFor="let firework of getFireworks()">
                   <td>{{firework.date}}</td>
                   <td>{{firework.city}}</td>
                   <td>{{firework.address}}</td>
